@@ -31,7 +31,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <box border="0.5" spacing="1.5" orientation="vertical">
 
         <!--- word suggestions -->
-        <panel filename='Compact-ko-Alpha.svg' scan_priority='1'>
+        <panel filename='Compact-Alpha.svg' scan_priority='1'>
             <include file='word_suggestions.xml'/>
         </panel>
 
