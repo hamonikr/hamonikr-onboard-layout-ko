@@ -4,7 +4,16 @@
 
 # Install
 
-sudo dpkg -i `RELEASE LINK DEB FILE`
+```
+git clone https://github.com/hamonikr/hamonikr-onboard-layout-ko.git
+cd hamonikr-onboard-layout-ko
+sudo ./install
+```
+
+# Remove
+```
+sudo ./install remove
+```
 
 # Usage
 
