@@ -69,7 +69,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     <key group='bottomrow' id='LCTL'/>
                     <key group='bottomrow' id='RCTL'/>
                     <key group='bottomrow' id='LALT'/>
-                    <key group='bottomrow' id='RALT' keycode='108' label='한/영' sticky='true' action='single-stroke'/>
+                    <key group='bottomrow' id='RALT' keycode='130' label='한/영' sticky='true' action='single-stroke'/>
                     <key group="bottomrow" id='LWIN'/>
 
                     <key id='TAB' group='misc'/>
