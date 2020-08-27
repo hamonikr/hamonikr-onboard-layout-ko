@@ -1,0 +1,14 @@
+Package: hamonikr-onboard-layout-ko
+Version: 1.0.0
+Architecture: all
+Maintainer: HamoniKR Team (HamoniKR OS Developement Group) <hamonikr-packages@googlegroups.com>
+Installed-Size: 1011980
+Pre-Depends: dpkg (>= 1.15.6)
+Depends: 
+Recommends: 
+Section: utils
+Priority: optional
+Homepage: https://hamonikr.org
+Description: onboard 한글 키보드
+ 한글 사용자를 위한 가상 키보드 온보드 레이아웃입니다.
+
