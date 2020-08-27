@@ -1,4 +1,40 @@
-#!/bin/sh
+#!/bin/bash
 
-set -e
+### Getting OS Information
+if [ -f /etc/lsb-release ]; then
+    . /etc/lsb-release
+    DIST=$DISTRIB_ID
+    DIST_VER=$DISTRIB_RELEASE
+else
+    DIST="Unknown"
+    DIST_VER="Unknown"
+fi
 
+if [ "$XDG_CURRENT_DESKTOP" = "" ]
+then
+  desktop=$(echo "$XDG_DATA_DIRS" | sed 's/.*\(xfce\|kde\|gnome\).*/\1/')
+else
+  desktop=$XDG_CURRENT_DESKTOP
+fi
+# convert to lower case
+desktop=${desktop,,} 
+
+case $DIST in
+    HamoniKR|Ubuntu|LinuxMint)
+        sudo install -D -m 644 debian/usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Compact-ko.onboard
+        sudo install -D -m 644 debian/usr/share/onboard/layouts/Full-Keyboard-ko.onboard /usr/share/onboard/layouts/Full-Keyboard-ko.onboard
+        gsettings set org.onboard layout '/usr/share/onboard/layouts/Full-Keyboard-ko.onboard'
+        gsettings set org.onboard system-theme-tracking-enabled true
+    ;;
+    *)
+    ;;    
+esac
+
+case $desktop in
+    deepin)
+        sudo mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
+        sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
+    ;;
+    *)
+    ;;    
+esac
