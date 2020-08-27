@@ -21,20 +21,19 @@ desktop=${desktop,,}
 
 case $DIST in
     HamoniKR|Ubuntu|LinuxMint)
-        sudo install -D -m 644 debian/usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Compact-ko.onboard
-        sudo install -D -m 644 debian/usr/share/onboard/layouts/Full-Keyboard-ko.onboard /usr/share/onboard/layouts/Full-Keyboard-ko.onboard
         gsettings set org.onboard layout '/usr/share/onboard/layouts/Full-Keyboard-ko.onboard'
         gsettings set org.onboard system-theme-tracking-enabled true
+        case $desktop in
+            deepin)
+                sudo mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
+                sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
+            ;;
+            *)
+            ;;    
+        esac        
     ;;
     *)
     ;;    
 esac
 
-case $desktop in
-    deepin)
-        sudo mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
-        sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
-    ;;
-    *)
-    ;;    
-esac
+
