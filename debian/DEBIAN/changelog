@@ -1,3 +1,9 @@
+hamonikr-onboard-layout-ko (1.0.3) stable; urgency=low
+ * debian/postinst:
+   - debug code 제거
+
+ -- Kevin Kim <root@hamonikr.org>  Fri, 28 Aug 2020 22:03:14 +0900
+
 hamonikr-onboard-layout-ko (1.0.2) stable; urgency=low
  * debian/postinst:
    - slick-greeter 설정 오류 수정 (Closes: #3)
