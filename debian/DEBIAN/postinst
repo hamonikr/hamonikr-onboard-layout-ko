@@ -18,7 +18,6 @@ else
 fi
 # convert to lower case
 desktop=${desktop,,} 
-echo $desktop; exit
 
 case $DIST in
     HamoniKR|Ubuntu|LinuxMint)
