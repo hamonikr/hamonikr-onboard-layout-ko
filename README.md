@@ -12,6 +12,14 @@
 sudo apt install hamonikr-onboard-layout-ko
 ```
 
+# Install (Ubuntu, LinuMint, Other debian based Linux)
+```
+wget -O - http://apt.hamonikr.org/hamonikr.key | sudo apt-key add -
+sudo bash -c "echo 'deb https://apt.hamonikr.org jin main upstream' > /etc/apt/sources.list.d/hamonikr-jin.list"
+sudo apt-get update
+sudo apt install hamonikr-onboard-layout-ko -y
+```
+
 # Install (Other Linux)
 
 ```
