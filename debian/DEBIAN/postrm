@@ -33,6 +33,10 @@ case $desktop in
         sudo rm -f /usr/share/onboard/layouts/Small.onboard
         sudo mv /usr/share/onboard/layouts/Small.onboard.bak /usr/share/onboard/layouts/Small.onboard
     ;;
+    x-cinnamon)
+        sudo rm -f /usr/share/onboard/layouts/Compact.onboard
+        sudo mv /usr/share/onboard/layouts/Compact.onboard.bak /usr/share/onboard/layouts/Compact.onboard
+    ;;    
     *)
     ;;    
 esac
