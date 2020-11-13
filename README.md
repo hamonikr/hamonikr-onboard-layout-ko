@@ -19,20 +19,6 @@ sudo bash -c "echo 'deb https://apt.hamonikr.org jin main upstream' > /etc/apt/s
 sudo apt-get update
 sudo apt install hamonikr-onboard-layout-ko -y
 ```
-
-# Install (Other Linux)
-
-```
-git clone https://github.com/hamonikr/hamonikr-onboard-layout-ko.git
-cd hamonikr-onboard-layout-ko
-sudo ./install
-```
-
-# Remove
-```
-sudo ./install remove
-```
-
 # Usage
 
 Onboard Setting > Select Korean Layout

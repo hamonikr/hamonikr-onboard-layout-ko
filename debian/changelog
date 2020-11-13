@@ -1,26 +1,39 @@
-hamonikr-onboard-layout-ko (1.0.3) stable; urgency=low
- * debian/postinst:
-   - debug code 제거
+hamonikr-onboard-layout-ko (1.0.4) jin; urgency=medium
 
- -- Kevin Kim <root@hamonikr.org>  Fri, 28 Aug 2020 22:03:14 +0900
+ * Update debian/control:
+  - fix size bug
+ * debian/postinst:
+ - change for user dconf
+  
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 13 Nov 2020 09:02:52 +0900
+
+hamonikr-onboard-layout-ko (1.0.3) stable; urgency=low
+
+ * debian/postinst:
+  - debug code 제거
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 28 Aug 2020 22:03:14 +0900
 
 hamonikr-onboard-layout-ko (1.0.2) stable; urgency=low
+
  * debian/postinst:
    - slick-greeter 설정 오류 수정 (Closes: #3)
  * debian/postrm:
    - 삭제 시 원래의 gnome setting 설정으로 복원하도록 추가
 
- -- Kevin Kim <root@hamonikr.org>  Fri, 28 Aug 2020 11:49:12 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 28 Aug 2020 11:49:12 +0900
 
 hamonikr-onboard-layout-ko (1.0.1) stable; urgency=low
+
  * debian/usr/share/onboard/layouts/Compact-ko.onboard:
    - keycode change 108 to 130
 
- -- Kevin Kim <root@hamonikr.org>  Fri, 28 Aug 2020 11:49:12 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 28 Aug 2020 11:49:12 +0900
 
 hamonikr-onboard-layout-ko (1.0.0) stable; urgency=low
+
  * first release
    - Released for Korean onboard users
    - Tested for HamoniKR 3.0, Deepin DE
 
- -- Kevin Kim <root@hamonikr.org>  Thu, 25 Aug 2020 10:00:12 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 25 Aug 2020 10:00:12 +0900
