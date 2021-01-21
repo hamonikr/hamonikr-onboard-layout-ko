@@ -1,3 +1,11 @@
+hamonikr-onboard-layout-ko (1.0.5) jin; urgency=medium
+
+ * Update
+  - 한영 전환 설정 문제로 인하여 키보드 UI 영문 한글 같이 표기
+  - keycode change RWIN(RSuper) key change 134 to 131 (한자)
+  
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 21 Jan 2021 13:48:49 +0900
+
 hamonikr-onboard-layout-ko (1.0.4) jin; urgency=medium
 
  * Update debian/control
