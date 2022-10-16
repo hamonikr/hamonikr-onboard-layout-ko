@@ -25,16 +25,17 @@ case $DIST in
         RUID=$(who | awk 'FNR == 1 {print $1}')
         # Translate Real Username to Real User ID
         RUSER_UID=$(id -u ${RUID})
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.onboard layout '/usr/share/onboard/layouts/Full-Keyboard-ko.onboard'
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.onboard system-theme-tracking-enabled true
-        
+        if [ ! -z "$RUID" ] ; then
+            sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.onboard layout '/usr/share/onboard/layouts/Full-Keyboard-ko.onboard'
+            sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.onboard system-theme-tracking-enabled true
+        fi
         # DE 종류에 따라서 기본 greeter 설정가능 여부가 다름
         case $desktop in
             deepin)
                 sudo mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
                 sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
             ;;
-            x-cinnamon)
+            x-cinnamon|gnome)
                 sudo mv /usr/share/onboard/layouts/Compact.onboard /usr/share/onboard/layouts/Compact.onboard.bak
                 sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Compact.onboard
             ;;
