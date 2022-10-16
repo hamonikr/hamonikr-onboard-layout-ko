@@ -1,15 +1,15 @@
-hamonikr-onboard-layout-ko (1.1.1) taebaek; urgency=medium
+hamonikr-onboard-layout-ko (1.2.0) stable; urgency=medium
 
- * Add gnome env in postinst
-   - return value is 'gnome' in HamoniKR 6.0
-   - Add exception handling
-  
- -- HamoniKR <pkg@hamonikr.org>  Sun, 16 Oct 2022 20:28:47 +0900
+ * Update postinst
+  - return value is gnome in HamoniKR 6.0
+  - Add exception handling
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 16 Oct 2022 20:33:48 +0900
 
 hamonikr-onboard-layout-ko (1.1.0) entjin; urgency=medium
 
  * Add usr/share/onboard/layouts/Compact-ko.onboard
-   - Add layout as compact
+  - Add layout as compact
   
  -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 16:25:41 +0900
 
