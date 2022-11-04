@@ -44,4 +44,4 @@ if [ ! -z "$RUID" ] ; then
         ;;    
     esac
 
-if
+fi
