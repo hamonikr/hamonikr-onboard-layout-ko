@@ -1,3 +1,10 @@
+hamonikr-onboard-layout-ko (1.2.1) taebaek; urgency=medium
+
+ * Add exception handling in postrm
+  - Ignore when build with script
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 04 Nov 2022 13:49:56 +0900
+
 hamonikr-onboard-layout-ko (1.2.0) stable; urgency=medium
 
  * Update postinst

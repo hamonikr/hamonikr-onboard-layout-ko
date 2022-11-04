@@ -19,24 +19,29 @@ fi
 # convert to lower case
 desktop=${desktop,,} 
 
-case $DIST in
-    HamoniKR|Ubuntu|LinuxMint)
-        gsettings set org.onboard layout '/usr/share/onboard/layouts/Compact.onboard'
-        gsettings set org.onboard system-theme-tracking-enabled false
-    ;;
-    *)
-    ;;    
-esac
+RUID=$(who | awk 'FNR == 1 {print $1}')
+if [ ! -z "$RUID" ] ; then
 
-case $desktop in
-    deepin)
-        sudo rm -f /usr/share/onboard/layouts/Small.onboard
-        sudo mv /usr/share/onboard/layouts/Small.onboard.bak /usr/share/onboard/layouts/Small.onboard
-    ;;
-    x-cinnamon|gnome)
-        sudo rm -f /usr/share/onboard/layouts/Compact.onboard
-        sudo mv /usr/share/onboard/layouts/Compact.onboard.bak /usr/share/onboard/layouts/Compact.onboard
-    ;;    
-    *)
-    ;;    
-esac
+    case $DIST in
+        HamoniKR|Ubuntu|LinuxMint)
+            gsettings set org.onboard layout '/usr/share/onboard/layouts/Compact.onboard'
+            gsettings set org.onboard system-theme-tracking-enabled false
+        ;;
+        *)
+        ;;    
+    esac
+
+    case $desktop in
+        deepin)
+            sudo rm -f /usr/share/onboard/layouts/Small.onboard
+            sudo mv /usr/share/onboard/layouts/Small.onboard.bak /usr/share/onboard/layouts/Small.onboard
+        ;;
+        x-cinnamon|gnome)
+            sudo rm -f /usr/share/onboard/layouts/Compact.onboard
+            sudo mv /usr/share/onboard/layouts/Compact.onboard.bak /usr/share/onboard/layouts/Compact.onboard
+        ;;    
+        *)
+        ;;    
+    esac
+
+if
