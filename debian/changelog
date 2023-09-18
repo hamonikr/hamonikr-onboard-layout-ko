@@ -1,3 +1,9 @@
+hamonikr-onboard-layout-ko (1.2.2) stable; urgency=medium
+
+ * Released on ubuntu 22.04
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 18 Sep 2023 11:43:58 +0900
+
 hamonikr-onboard-layout-ko (1.2.1) taebaek; urgency=medium
 
  * Add exception handling in postrm
