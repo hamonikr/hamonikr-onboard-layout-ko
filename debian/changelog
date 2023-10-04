@@ -1,3 +1,12 @@
+hamonikr-onboard-layout-ko (1.3.0) stable; urgency=medium
+
+ * Add layouts
+  - Merged contributor @begin-theadventure code
+  - https://github.com/hamonikr/hamonikr-onboard-layout-ko/pull/5
+  - Added Small, Phone, Grid layouts
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 04 Oct 2023 13:43:53 +0900
+
 hamonikr-onboard-layout-ko (1.2.2) stable; urgency=medium
 
  * Released on ubuntu 22.04
