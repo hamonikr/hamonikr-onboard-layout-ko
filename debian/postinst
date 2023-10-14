@@ -32,12 +32,20 @@ case $DIST in
         # DE 종류에 따라서 기본 greeter 설정가능 여부가 다름
         case $desktop in
             deepin)
-                sudo mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
-                sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
+                if [ -f "/usr/share/onboard/layouts/Small.onboard" ]; then
+                    mv /usr/share/onboard/layouts/Small.onboard /usr/share/onboard/layouts/Small.onboard.bak
+                fi
+                if [ -f "/usr/share/onboard/layouts/Compact-ko.onboard" ]; then
+                    ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Small.onboard
+                fi
             ;;
             x-cinnamon|gnome)
-                sudo mv /usr/share/onboard/layouts/Compact.onboard /usr/share/onboard/layouts/Compact.onboard.bak
-                sudo ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Compact.onboard
+                if [ -f "/usr/share/onboard/layouts/Compact.onboard" ]; then
+                    mv /usr/share/onboard/layouts/Compact.onboard /usr/share/onboard/layouts/Compact.onboard.bak
+                fi
+                if [ -f "/usr/share/onboard/layouts/Compact-ko.onboard" ]; then
+                    ln -sf /usr/share/onboard/layouts/Compact-ko.onboard /usr/share/onboard/layouts/Compact.onboard
+                fi
             ;;
             *)
             ;;    
